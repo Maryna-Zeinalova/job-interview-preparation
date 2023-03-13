@@ -45,7 +45,7 @@ function checkStatus(question) {
   }
 }
 
-function showCards(element) {   
+function iterateCards(element) {   
   cardsHTML =
     cardsHTML +
     `
@@ -74,7 +74,7 @@ function showFalseCards() {
     (question) => question.status === false
   );
   cardsElement.innerHTML = "";
-  arrayStatusFalse.forEach(showCards);
+  arrayStatusFalse.forEach(iterateCards);
   cardsElement.insertAdjacentHTML("afterbegin", cardsHTML);
 }
 
@@ -88,7 +88,7 @@ function displayCards() {
     </div>
   </div>
   </div>`;
-  questions.forEach(showCards);
+  questions.forEach(iterateCards);
   cardsElement.insertAdjacentHTML("afterbegin", cardsHTML);
 }
 displayCards();
