@@ -10,16 +10,17 @@
     />
   </head>
   <body>
-    <div class="wrapper hero is-fullheight has-background-dark">
-      <section class="section pb-1">
+    <div class="hero is-fullheight has-background-dark">
+      <section class="section">
         <div class="container">
           <h1 class="title has-text-centered is-size-1 has-text-white">
             JavaScript job interview preparation
           </h1>
-        </div>
-      </section>
-      <section class="section">
-        <div class="container">
+          <label class="checkbox has-text-light pb-3">
+            <input type="checkbox" onclick="showFalseCards()" />
+            Questions I don't know
+          </label>
+          
           <div class="columns is-multiline tile is-ancestor" id="cards">
           </div>
         </div>
