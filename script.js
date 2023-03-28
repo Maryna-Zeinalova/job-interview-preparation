@@ -16,23 +16,21 @@ function displayCards() {
   cardsElement.insertAdjacentHTML("afterbegin", cardsHTML);
   subscribe();
 }
+displayCards();
 
 function iterateCards(element, index) {
   cardsHTML =
     cardsHTML +
-    `
-          <div class="column is-4 tile is-parent">
-            <div class="card tile is-child box has-background-${
-              checkStatus(element).cardsColorHTML
-            }">
-              <div class="card-content">
-                <div class="icon-text has-text-grey pb-2" data-question="${index}"><span class="icon has-text-info">${
-      checkStatus(element).statusHTML
-    }</span></div>
-                <p class="title is-size-5 has-text-grey">${element.question}</p>
-              </div>
-            </div>
+    `<div class="column is-4 tile is-parent">
+      <div class="card tile is-child box has-background-${checkStatus(element).cardsColorHTML}">
+        <div class="card-content">
+          <div class="icon-text has-text-grey pb-2" data-question="${index}">
+          <span class="icon has-text-info">${checkStatus(element).statusHTML}</span>
           </div>
+            <p class="title is-size-5 has-text-grey">${element.question}</p>
+        </div>
+      </div>
+    </div>
 `;
   return cardsHTML;
 }
@@ -68,7 +66,14 @@ function showFalseCards() {
   cardsElement.insertAdjacentHTML("afterbegin", cardsHTML);
 }
 
-displayCards();
+const checkbox = document.getElementById("checkbox");
+checkbox.addEventListener("click", () => {
+  if (checkbox.checked) {
+    showFalseCards();
+  } else {
+    displayCards(questions);
+  }
+});
 
 function subscribe() {
   const listQuestionSelectors = document.querySelectorAll(
