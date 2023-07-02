@@ -1,0 +1,19 @@
+{
+  "name": "job-interview-preparation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "questions.js",
+  "scripts": {
+    "build": "tsc script.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maryna-Zeinalova/job-interview-preparation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maryna-Zeinalova/job-interview-preparation/issues"
+  },
+  "homepage": "https://github.com/Maryna-Zeinalova/job-interview-preparation#readme"
+}
